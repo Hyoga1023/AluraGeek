@@ -13,6 +13,7 @@
     font-style: normal;
 }
 
+/* Estilos comunes */
 body[data-contexto="pagina_principal"] {
     background: linear-gradient(180deg, #635985 0%, #393053 48.44%, black 100%);
     min-height: 100vh;
@@ -28,6 +29,18 @@ body[data-contexto="Estado de compras"] {
     padding: 0;
     color: var(--color-primario);
 }
+#formulario-seccion, #productos-seccion {
+    display: none; 
+}
+
+body[data-contexto="pagina_principal"] #productos-seccion {
+    display: block;
+}
+
+body[data-contexto="Estado de compras"] #formulario-seccion {
+    display: block;
+}
+
 ul, li, ol {
     font-family: "Shadows Into Light", cursive;
     font-size: 2rem;
