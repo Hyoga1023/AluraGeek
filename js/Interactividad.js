@@ -1,15 +1,24 @@
-const productos = document.getElementById('productos');
+const funcionalidadEnlace = document.getElementById('funcionalidad-enlace');
 const formulario = document.getElementById('formulario');
 const body = document.body;
+const trashIcons = document.querySelectorAll('.trashIcon');
 
 function cambiarContexto(contexto) {
   body.setAttribute('data-contexto', contexto);
 }
 
-productos.addEventListener('click', () => {
+funcionalidadEnlace.addEventListener('click', (event) => {
+  event.preventDefault();
+  cambiarContexto('Estado de compras');
+});
+
+formulario.addEventListener('click', (event) => {
   cambiarContexto('pagina_principal');
 });
 
-formulario.addEventListener('click', () => {
-  cambiarContexto('Estado de compras');
+
+trashIcons.forEach(icono => {
+  icono.addEventListener('click', (event) => {
+    cambiarContexto('pagina_principal');
+  });
 });

@@ -235,3 +235,83 @@ input{
     display: block;
     margin: 0 auto;
 }
+/* Estilos responsive generales */
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 40%; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+    }
+
+    .Contenedor__general {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        margin: 0 1rem;
+    }
+
+    .columna__izquierda, 
+    .columna__derecha {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        padding: 0.5rem;
+    }
+
+    .barra__navegacion ul {
+        flex-direction: column; /* Menú vertical en móviles */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contenedor_cards {
+        grid-template-columns: repeat(1, 1fr); /* Una sola columna en móviles */
+        height: auto; /* Altura automática */
+    }
+
+    ul, li, ol {
+        font-size: 1.5rem; /* Reduce el tamaño de fuente */
+    }
+
+    .contenedor_formulario,
+    .contenedor__botones {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .boton_Enviar,
+    .boton_Limpiar {
+        width: 100%; /* Botones de ancho completo */
+        padding: 0.5rem 1rem;
+    }
+
+    input {
+        font-size: 1.2rem; /* Reduce el tamaño de fuente de inputs */
+        padding: 0.7rem;
+    }
+
+    .logo__footer_alura,
+    .logo__desarrollador {
+        width: 50%; /* Ajusta logos del footer */
+    }
+}
+
+/* Estilos para dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 60%; /* Aún más pequeño para pantallas muy pequeñas */
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    ul, li, ol {
+        font-size: 1.2rem;
+    }
+}
+
+/* Asegura que la página sea responsiva */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
