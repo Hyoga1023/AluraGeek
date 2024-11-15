@@ -13,7 +13,6 @@
     font-style: normal;
 }
 
-/* Estilos comunes */
 body[data-contexto="pagina_principal"] {
     background: linear-gradient(180deg, #635985 0%, #393053 48.44%, black 100%);
     min-height: 100vh;
@@ -235,83 +234,84 @@ input{
     display: block;
     margin: 0 auto;
 }
-/* Estilos responsive generales */
-@media screen and (max-width: 768px) {
-    .logo {
-        width: 40%; /* Ajusta el tamaño del logo para pantallas más pequeñas */
-    }
-
+/* Estilos responsivos */
+@media screen and (max-width: 1024px) {
     .Contenedor__general {
-        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        flex-direction: column;
         margin: 0 1rem;
+        gap: 1rem;
     }
 
-    .columna__izquierda, 
+    .columna__izquierda,
     .columna__derecha {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        width: 100%;
         padding: 0.5rem;
     }
 
+    .contenedor_cards {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablet */
+        height: auto;
+    }
+
+    .logo {
+        width: 40%; /* Ajuste de tamaño del logo */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Contenedor__general {
+        flex-direction: column-reverse; /* Cambiar orden para móvil */
+    }
+
+    .contenedor_cards {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en móvil */
+        height: auto;
+    }
+
     .barra__navegacion ul {
-        flex-direction: column; /* Menú vertical en móviles */
+        flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
 
-    .contenedor_cards {
-        grid-template-columns: repeat(1, 1fr); /* Una sola columna en móviles */
-        height: auto; /* Altura automática */
+    .contenedor__botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 60%; /* Ajuste de tamaño del logo para móvil */
     }
 
     ul, li, ol {
-        font-size: 1.5rem; /* Reduce el tamaño de fuente */
-    }
-
-    .contenedor_formulario,
-    .contenedor__botones {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .boton_Enviar,
-    .boton_Limpiar {
-        width: 100%; /* Botones de ancho completo */
-        padding: 0.5rem 1rem;
-    }
-
-    input {
-        font-size: 1.2rem; /* Reduce el tamaño de fuente de inputs */
-        padding: 0.7rem;
-    }
-
-    .logo__footer_alura,
-    .logo__desarrollador {
-        width: 50%; /* Ajusta logos del footer */
-    }
-}
-
-/* Estilos para dispositivos muy pequeños */
-@media screen and (max-width: 480px) {
-    .logo {
-        width: 60%; /* Aún más pequeño para pantallas muy pequeñas */
+        font-size: 1.5rem;
     }
 
     h1, h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .boton_Enviar, .boton_Limpiar {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor_cards {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en móviles pequeños */
+        gap: 10px;
+    }
+
+    .logo {
+        width: 80%; /* Ajuste final de tamaño del logo */
     }
 
     ul, li, ol {
         font-size: 1.2rem;
     }
-}
 
-/* Asegura que la página sea responsiva */
-* {
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-body {
-    width: 100%;
-    overflow-x: hidden;
+    h1, h2 {
+        font-size: 1.5rem;
+    }
 }
