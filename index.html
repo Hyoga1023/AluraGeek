@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/LogoIcono-SinFondo.png" type="image/x-icon">
+    <title>AluraGeek</title>
+</head>
+<body data-contexto="pagina_principal">
+    <header class="encabezado">
+            <img class="logo" src="./img/AluraGeek-SinFondo.png" alt="logo AluraGeek">
+            <div class="barra__navegacion">
+                <nav>
+                    <ul>
+                        <li><a href="enlace.html">Funcionalidad de la aplicación</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <main>
+        <section class="Contenedor__general">
+              <div class="columna__izquierda">
+                  <h1>Mis Productos:</h1>
+                  <div class="contenedor_cards">
+                    <div id="contenedor-productos">
+                     <!--contenido API-->
+                    </div>
+                  </div>
+              </div>
+        <section class="columna__derecha">
+                <h2>Agregar Producto:</h2>
+                    <div class="contenedor_formulario">
+                          <form class="contenedor__form" id="formProducto">
+                            <input type="text" id="nombre" placeholder="Nombre del producto" required><br>
+                            <input type="number" id="precio" placeholder="Precio" required><br>
+                            <input type="text" id="imagen" placeholder="URL de la imagen" required><br>
+                          </form>
+                        <div class="contenedor__botones">
+                            <button id="enviar" class="boton_Enviar">Enviar</button>
+                            <button id="limpiar" class="boton_Limpiar">Limpiar</button>
+                        </div>    
+                    </div>
+            </section>
+        </section>
+    </main>
+    <footer class="footer_container">
+        <div>
+            <img class="logo__footer_alura" src="./img/LogoIcono-SinFondo.png" alt="Logo AluraGeek">
+        </div>
+        <div class="footer__texto">
+            <p>AluraGeek Desarrollado por Cesar Martinez</p>
+            <p>Alura LATAM 2024</p><br>
+        </div>
+        <div>
+            <img class="logo__desarrollador" src="./img/logo_letra_blanca_sin_fondo.png"  alt="logo desarrollador">
+        </div>
+    </footer>
+    <script type="module" src="js/ConexionAPI.js"></script>
+    <script  type ="module" src="js/listarProductos.js"></script>
+    <script type="module" src="js/basic.js"></script>
+    <script type="module" src="js/crearProducto.js"></script>
+  </body>
+</html>

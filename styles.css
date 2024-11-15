@@ -1,0 +1,224 @@
+:root {
+    --color-primario: white;
+    --color-secundario: #635985;
+    --color-terceriario: #443C68;
+    --color-cuaternario: #393053;
+    --color-quintario: #18122B;
+    --lils: #b872FF;
+    --linear-botes: linear-gradient(180deg, #B872FF 0%, #144480 100%);
+}
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body[data-contexto="pagina_principal"] {
+    background: linear-gradient(180deg, #635985 0%, #393053 48.44%, black 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: var(--color-primario);
+}
+
+body[data-contexto="Estado de compras"] {
+    background: linear-gradient(180deg, #A64D79 0%, #3B1C32 48.44%, black 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: var(--color-primario);
+}
+ul, li, ol {
+    font-family: "Shadows Into Light", cursive;
+    font-size: 2rem;
+}
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    flex-direction: column;
+}
+
+.logo {
+    margin-top: 2rem;
+    width: 20%;
+    height: auto;  
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.barra__navegacion{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+li::before {
+    content: "👉";
+    margin-right: 8px; 
+  }
+h1{
+    font-family:"Shadows Into Light", cursive;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+h2{
+    font-family:"Shadows Into Light", cursive;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem; 
+}
+.Contenedor__general{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 3rem;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 2%;
+}
+.columna__izquierda{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    padding: 1rem;
+    width: 75%;
+}
+.columna__derecha{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    padding: 1rem;
+    width: 30%;
+}
+.contenedor_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    height: 50vh;
+    border: 2px solid var(--lils);
+    border-radius: 10px;
+    padding: 2%;
+    font-family:"Shadows Into Light", cursive;
+    font-size: 1.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.contenedor_cards::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contenedor_cards::-webkit-scrollbar-thumb {
+    background-color: rgba(184, 114, 255, 0.5);
+    border-radius: 4px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid var(--lils); 
+    padding: 3%;
+    border-radius: 10px;
+    gap: 1%;
+}
+.img__cards {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid var(--lils); 
+    border-radius: 10px;
+}
+.card-container--info{
+    display: flex;
+    flex-direction: column;
+}
+.card-container--value{
+    display: flex;
+    justify-content: space-between;
+}
+.trashIcon{  
+    width: auto;
+    height: 100%;
+}
+.contenedor_formulario{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    padding: 2rem;
+    border: 2px solid var(--lils);
+    border-radius: 10px;
+    gap: 2%;
+    padding: 3%;
+}
+.contenedor__form{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor__botones{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.boton_Enviar{
+    color: var(--color-primario);
+    font-family: "Shadows Into Light", cursive;
+    font-size: 1.5rem;
+    border: 2px solid var(--lils);
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+}
+.boton_Limpiar{
+    color: var(--color-primario);
+    font-family: "Shadows Into Light", cursive;
+    font-size: 1.5rem;
+    border: 2px solid var(--lils);
+    border-radius: 10px;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+}
+.boton_Enviar:hover, .boton_Limpiar:hover{
+    background-color: var(--lils);
+    color: var(--color-quintario);
+}
+
+input{
+    padding: 1rem;
+    font-family:"Shadows Into Light", cursive;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.logo__footer_alura{
+    width:30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.footer__texto{
+    font-family: "Shadows Into Light", cursive;
+    text-align: center;
+}
+.logo__desarrollador{
+    width:30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

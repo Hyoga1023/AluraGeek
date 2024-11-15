@@ -1,0 +1,12 @@
+{
+  "name": "alurageek",
+  "version": "1.0.0",
+  "description": "Desarrollo trabajo final Alura LATAM implementando todas las tecnologias aprendidas incluyendo el uso de APIs y archivo JSON",
+  "main": "ConexionAPI.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

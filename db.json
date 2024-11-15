@@ -1,0 +1,67 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Letrero Café 1 Vintage",
+        "precio": 20000,
+        "imagen": "./img/Productos/card1.png",
+        "iconoBasura": "./img/bote_basura.png"
+      },
+      {
+        "id": 2,
+        "nombre": "Letrero Café 2 Vintage",
+        "precio": 18000,
+        "imagen": "./img/Productos/card2.png",
+        "iconoBasura": "./img/bote_basura.png"
+      },
+      {
+        "id": 3,
+        "nombre": "Letrero Gatos Vintage",
+        "precio": 20000,
+        "imagen": "./img/Productos/card3.png",
+        "iconoBasura": "./img/bote_basura.png"
+      },
+      {
+        "id": 4,
+        "nombre": "Letrero Happy-Taco Vintage",
+        "precio": 17000,
+        "imagen": "./img/Productos/card4.png",
+        "iconoBasura": "./img/bote_basura.png"
+      },
+      {
+        "id": 5,
+        "nombre": "Vintage Robot",
+        "precio": 100000,
+        "imagen": "./img/Productos/card5.png",
+        "iconoBasura": "./img/bote_basura.png"
+      },
+      {
+        "id": 6,
+        "nombre": "Anuncio Terminator 2",
+        "precio": 18000,
+        "imagen": "./img/Productos/card6.png",
+        "iconoBasura": "./img/bote_basura.png"
+      },
+      {
+        "id": 7,
+        "nombre": "Anuncio Vintage Gata",
+        "precio": 15000,
+        "imagen": "./img/Productos/card7.png",
+        "iconoBasura": "./img/bote_basura.png"
+      },
+      {
+        "id": 8,
+        "nombre": "Anuncio Vintage Textos",
+        "precio": 15000,
+        "imagen": "./img/Productos/card8.png",
+        "iconoBasura": "./img/bote_basura.png"
+      },
+      {
+        "id": 9,
+        "nombre": "Publicidad Coca-Cola",
+        "precio": 20000,
+        "imagen": "./img/Productos/card9.png",
+        "iconoBasura": "./img/bote_basura.png"
+      }
+    ]
+}
