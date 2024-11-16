@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px; 
+}
 :root {
     --color-primario: white;
     --color-secundario: #635985;
@@ -42,7 +46,7 @@ body[data-contexto="Estado de compras"] #formulario-seccion {
 
 ul, li, ol {
     font-family: "Shadows Into Light", cursive;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .encabezado {
     display: flex;
@@ -71,7 +75,7 @@ ul, li, ol {
 ul{
     display: flex;
     justify-content: space-around;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
     padding: 0;
 }
@@ -79,6 +83,11 @@ li::before {
     content: "👉";
     margin-right: 8px; 
   }
+
+.ol__texto {
+    list-style-type: decimal;
+}
+
 h1{
     font-family:"Shadows Into Light", cursive;
     text-align: center;
@@ -90,6 +99,19 @@ h2{
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.5rem; 
+}
+.texto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1% 10%;
+    font-family:"Shadows Into Light", cursive;
+    font-size: 1.5rem;
+}
+.ul__texto{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
 }
 .Contenedor__general{
     display: flex;
@@ -234,6 +256,35 @@ input{
     display: block;
     margin: 0 auto;
 }
+#volver-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: transparent; 
+    border: 2px solid var(--lils);
+    border-radius: 50%; 
+    width: 50px;  
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;  
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  #volver-arriba.mostrar {
+    opacity: 1; 
+    transform: scale(1);
+  }
+  
+  #volver-arriba:hover {
+    background-color: rgba(0, 123, 255, 0.2);  
+    border-color: rgba(0, 123, 255, 0.6); 
+  }
+  
+  
 /* Estilos responsivos */
 @media screen and (max-width: 1024px) {
     .Contenedor__general {

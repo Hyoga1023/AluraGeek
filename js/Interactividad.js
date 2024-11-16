@@ -1,24 +1,45 @@
-const funcionalidadEnlace = document.getElementById('funcionalidad-enlace');
-const formulario = document.getElementById('formulario');
-const body = document.body;
-const trashIcons = document.querySelectorAll('.trashIcon');
+document.addEventListener('DOMContentLoaded', () => {
+  const funcionalidadEnlace = document.getElementById('funcionalidad-enlace');
+  const body = document.body;
+  const trashIcons = document.querySelectorAll('.trashIcon');
+  const botonVolverArriba = document.getElementById('volver-arriba');
 
-function cambiarContexto(contexto) {
-  body.setAttribute('data-contexto', contexto);
-}
+  // Función para cambiar el contexto
+  function cambiarContexto(contexto) {
+    body.setAttribute('data-contexto', contexto);
+  }
 
-funcionalidadEnlace.addEventListener('click', (event) => {
-  event.preventDefault();
-  cambiarContexto('Estado de compras');
-});
+  // Evento para el enlace de funcionalidad
+  funcionalidadEnlace.addEventListener('click', () => {
+    cambiarContexto('Estado de compras');
+    document.getElementById('texto').scrollIntoView({ behavior: 'smooth' });
+  });
 
-formulario.addEventListener('click', (event) => {
-  cambiarContexto('pagina_principal');
-});
+  // Eventos para iconos de eliminación
+  trashIcons.forEach(icono => {
+    icono.addEventListener('click', () => {
+      cambiarContexto('pagina_principal');
+    });
+  });
 
+  // Manejo del botón de volver arriba
+  function manejarBotonVolverArriba() {
+    // Mostrar u ocultar el botón basado en la posición del scroll
+    if (window.pageYOffset > 200) {
+      botonVolverArriba.classList.add('mostrar');
+    } else {
+      botonVolverArriba.classList.remove('mostrar');
+    }
+  }
 
-trashIcons.forEach(icono => {
-  icono.addEventListener('click', (event) => {
-    cambiarContexto('pagina_principal');
+  // Agregar evento de scroll
+  window.addEventListener('scroll', manejarBotonVolverArriba);
+
+  // Evento de clic para volver arriba
+  botonVolverArriba.addEventListener('click', () => {
+    window.scrollTo({ 
+      top: 0, 
+      behavior: 'smooth' 
+    });
   });
 });
